@@ -1,0 +1,26 @@
+{
+  "name": "projeto-final-gqs",
+  "version": "1.0.0",
+  "description": "Projeto final para disciplina Gestão da Qualidade de Software - Cadastro de Livros e Autores",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "test:integration": "jest tests/integration",
+    "test:unit": "jest tests/unit",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.1",
+    "sequelize": "^6.32.1",
+    "ejs": "^3.1.9",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+    "cypress": "^12.17.1"
+  }
+}
