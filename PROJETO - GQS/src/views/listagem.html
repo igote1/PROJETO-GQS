@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Livros Cadastrados</title>
+</head>
+<body>
+  <h1>Lista de Livros</h1>
+  <ul id="lista-livros"></ul>
+
+  <script>
+    fetch('/livros')
+      .then(res => res.json())
+      .then(data => {
+        const ul = document.getElementById('lista-livros');
+        data.forEach(livro => {
+          const li = document.createElement('li');
+          li.textContent = `Título: ${livro.titulo}, Autor: ${livro.autor}`;
+          ul.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
